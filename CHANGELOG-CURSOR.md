@@ -200,3 +200,14 @@ Les modifications apportées rétablissent l'effet de survol sur les icônes de 
   - Mise à jour du hash de l'URL lors du clic sur les liens de navigation
   - Réduction du seuil de visibilité de la section Contact pour une meilleure détection
   - Ajout de logs de débogage pour faciliter le suivi des états de navigation
+
+- Fichiers modifiés :
+  - `src/App.css`
+
+- Changements apportés :
+  - Amélioration du design des liens sociaux dans la section Contact
+  - Harmonisation des styles avec le reste de l'application
+  - Ajout d'effets de survol plus élaborés (ombre, bordure, élévation, échelle)
+  - Optimisation de l'affichage pour les appareils mobiles
+  - Ajustement des tailles, marges et espacements pour une meilleure présentation
+  - Cohérence visuelle avec les cartes de projets et éléments de navigation

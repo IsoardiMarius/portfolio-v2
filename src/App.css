@@ -873,6 +873,8 @@ body {
 /* Contact Section */
 .contact-intro {
   max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -882,6 +884,7 @@ body {
   max-width: 500px;
   font-size: 1.05rem;
   line-height: 1.8;
+  text-align: center;
 }
 
 .contact-info a {
@@ -900,24 +903,41 @@ body {
   flex-wrap: wrap;
   gap: 1.5rem;
   margin: 2rem auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  gap: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--border-radius);
   background-color: var(--card-light);
   color: var(--text-light);
+  font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
 }
 
 .App.dark .social-link {
   background-color: var(--card-dark);
   color: var(--text-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.15);
+  border: 1px solid rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+}
+
+.App.dark .social-link:hover {
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  color: var(--primary);
 }
 
 .social-icon {
@@ -925,16 +945,26 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
 }
 
 .social-icon svg {
-  height: 22px;
-  width: 22px;
+  height: 24px;
+  width: 24px;
 }
 
 .social-name {
   font-weight: 500;
   font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover .social-name {
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {
@@ -945,16 +975,23 @@ body {
   
   .social-link {
     flex-direction: column;
-    padding: 1rem;
-    width: 100px;
+    padding: 1.25rem 0.75rem;
+    width: 110px;
+    height: 110px;
     text-align: center;
+    justify-content: center;
   }
   
   .social-icon {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .social-icon svg {
+    height: 28px;
+    width: 28px;
   }
   
   .social-name {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
