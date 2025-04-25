@@ -19,7 +19,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       <p className="description">{project.description}</p>
       <div className="project-tech">
         {project.technologies.map((tech, index) => (
-          <span key={index} className="tech">{tech}</span>
+          <span key={index + tech} className="tech">{tech}</span>
         ))}
       </div>
       <div className="project-links">
@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <h2>Mes Projets</h2>
+      <h2>Mes Projets consultables</h2>
       <motion.p 
         className="section-intro"
         initial={{ opacity: 0 }}

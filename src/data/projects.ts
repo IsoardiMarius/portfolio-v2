@@ -17,7 +17,7 @@ export const projects: Project[] = [
       React.createElement('p', null, 'Architecture distribuée, ', React.createElement('em', null, 'hautement résiliente'), ' et conçue pour le traitement en temps réel.')
     ),
     technologies: ['Spring Boot', 'Go', 'Flask', 'React Native', 'PostgreSQL', 'Redis', 'AWS'],
-    websiteUrl: 'https://igaar.fr'
+    websiteUrl: 'https://igaar.io'
   },
   {
     id: 'le-bouddoir',

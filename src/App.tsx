@@ -59,9 +59,11 @@ const App: React.FC = () => {
         <main className="main">
           <About>
             <p>Actuellement en poste chez <strong>Hexacoffre</strong> en tant que développeur fullstack.</p>
-            
-            <p>Je travaille sur des projets techniques mêlant backend, frontend et infrastructure. Certifié <strong>AWS Cloud Practitioner</strong>, je m'oriente activement vers les métiers du Cloud, avec l'objectif de monter en expertise.</p>
-            
+
+            <p>Je travaille sur des projets techniques mêlant backend, frontend et infrastructure. Certifié <strong>AWS
+              Cloud Practitioner</strong>, je m'oriente activement vers les métiers du Cloud, avec l'objectif de monter
+              en expertise.</p>
+
             <div className="stack-container">
               <p className="stack-title">Stack Dev :</p>
               <div className="stack-items">
@@ -78,7 +80,7 @@ const App: React.FC = () => {
                 <span className="stack-item">MySQL</span>
               </div>
             </div>
-            
+
             <div className="stack-container">
               <p className="stack-title">Stack Ops :</p>
               <div className="stack-items">
@@ -92,21 +94,34 @@ const App: React.FC = () => {
                 <span className="stack-item">Azure</span>
               </div>
             </div>
-            
-            <p>Je privilégie un poste de <strong>Cloud Engineer</strong> tout en restant ouvert aux missions fullstack.</p>
+
+            <div className="stack-container">
+              <p className="stack-title">Compétences transverses :</p>
+              <div className="stack-items">
+                <span className="stack-item">Gestion des priorités</span>
+                <span className="stack-item">Gestion et coordination d'équipe</span>
+                <span className="stack-item">Conception</span>
+                <span className="stack-item">Prise d'initiative</span>
+                <span className="stack-item">Adaptabilité</span>
+              </div>
+            </div>
+
+
+            <p>Je privilégie un poste de <strong>Cloud Engineer</strong> tout en restant ouvert aux missions fullstack.
+            </p>
           </About>
 
-          <Experience experiences={experiences} />
-          <Education educationList={education} />
-          <Skills skills={skills} />
-          <Projects projects={projects} />
-          <Realisations realisations={realisations} />
-          <Contact message={contactMessage} />
+          <Experience experiences={experiences}/>
+          <Education educationList={education}/>
+          <Skills skills={skills}/>
+          <Projects projects={projects}/>
+          <Realisations realisations={realisations}/>
+          <Contact message={contactMessage}/>
         </main>
-        
-        <Footer />
+
+        <Footer/>
       </motion.div>
-      <Navbar />
+      <Navbar/>
 
     </div>
   );
