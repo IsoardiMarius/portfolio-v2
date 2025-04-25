@@ -17,7 +17,7 @@ const Contact: React.FC<ContactProps> = ({ message = contactMessage }) => {
       variants={fadeInUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.05 }}
     >
       <h2>Contact</h2>
       

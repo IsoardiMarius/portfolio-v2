@@ -21,6 +21,25 @@ const TopNavbar: React.FC = () => {
     // Fonction pour détecter la section active lors du défilement
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      
+      // Détecter quand on est près du bas de la page pour activer la section "contact"
+      if (window.innerHeight + window.scrollY >= documentHeight - 200) {
+        // Vérifions si la section de contact est visible
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          const contactRect = contactSection.getBoundingClientRect();
+          // Si une partie de la section contact est visible, on l'active
+          if (contactRect.top < windowHeight && contactRect.bottom > 0) {
+            if (activeSection !== 'contact') {
+              console.log('Section contact activée (visible en bas de page)');
+              setActiveSection('contact');
+            }
+            return;
+          }
+        }
+      }
       
       // Trouver la section actuellement visible
       const sectionsElements = document.querySelectorAll('section[id]');
@@ -29,6 +48,7 @@ const TopNavbar: React.FC = () => {
         if (section && scrollPosition >= section.offsetTop) {
           const id = section.getAttribute('id') ?? '';
           if (id && id !== activeSection) {
+            console.log(`Section active détectée: ${id}`);
             setActiveSection(id);
           }
           break;
@@ -50,17 +70,37 @@ const TopNavbar: React.FC = () => {
       }
     };
 
+    // Fonction pour détecter les changements de hash dans l'URL
+    const handleHashChange = () => {
+      const hash = window.location.hash.substring(1); // Enlever le # du début
+      if (hash) {
+        console.log(`Hash URL détecté: ${hash}`);
+        // Si le hash correspond à une section, l'activer
+        const sectionIds = sections.map(section => section.id);
+        if (sectionIds.includes(hash)) {
+          setActiveSection(hash);
+        } else if (hash === 'accueil') {
+          setActiveSection('accueil');
+        }
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('hashchange', handleHashChange);
     
     // Vérifier la section active au chargement
     handleScroll();
     
+    // Vérifier si un hash est présent dans l'URL au chargement
+    handleHashChange();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('hashchange', handleHashChange);
     };
-  }, [activeSection, menuOpen]);
+  }, [activeSection, menuOpen, sections]);
 
   // Fonction pour naviguer vers une section
   const scrollToSection = (id: string) => {
@@ -71,6 +111,8 @@ const TopNavbar: React.FC = () => {
         behavior: 'smooth'
       });
       setActiveSection(id);
+      // Mettre à jour l'URL avec le hash de la section, mais sans rechargement
+      window.history.pushState(null, '', `#${id}`);
       setMenuOpen(false);
     } else if (id === 'accueil') {
       window.scrollTo({
@@ -78,6 +120,7 @@ const TopNavbar: React.FC = () => {
         behavior: 'smooth'
       });
       setActiveSection('accueil');
+      window.history.pushState(null, '', `#accueil`);
       setMenuOpen(false);
     }
   };

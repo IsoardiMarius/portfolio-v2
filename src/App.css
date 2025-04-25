@@ -92,6 +92,7 @@ body {
 /* Header */
 .header {
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .intro {
@@ -872,8 +873,6 @@ body {
 /* Contact Section */
 .contact-intro {
   max-width: 700px;
-  margin: 0 auto 2rem;
-  text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -883,7 +882,6 @@ body {
   max-width: 500px;
   font-size: 1.05rem;
   line-height: 1.8;
-  text-align: center;
 }
 
 .contact-info a {

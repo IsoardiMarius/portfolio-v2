@@ -187,3 +187,16 @@ Les modifications apportées rétablissent l'effet de survol sur les icônes de 
   - Utilisation du message de contact depuis le fichier centralisé
   - Amélioration du composant Contact pour utiliser les liens sociaux sans référencer spécifiquement email/téléphone
   - Meilleure cohérence de navigation à travers le site
+
+- Fichiers modifiés :
+  - `src/components/TopNavbar.tsx`
+  - `src/components/Contact.tsx`
+
+- Changements apportés :
+  - Correction de la détection de la section Contact dans la TopNavbar
+  - Amélioration de la logique de détection des sections visibles lors du défilement
+  - Ajout d'une détection spéciale pour la section Contact en bas de page
+  - Ajout de la prise en charge des changements de hash dans l'URL pour la navigation
+  - Mise à jour du hash de l'URL lors du clic sur les liens de navigation
+  - Réduction du seuil de visibilité de la section Contact pour une meilleure détection
+  - Ajout de logs de débogage pour faciliter le suivi des états de navigation
