@@ -49,7 +49,7 @@ const icons = {
 };
 
 // Données de contact principales
-export const contactEmail = "marius.isoardi@example.com";
+export const contactEmail = "isoardi.m@outlook.com";
 export const contactPhone = "+33 6 12 34 56 78";
 export const contactMessage = "Vous souhaitez discuter d'une opportunité professionnelle ou d'une collaboration ? Je suis particulièrement intéressé par les postes de Cloud Engineer, mais reste ouvert aux missions fullstack. N'hésitez pas à me contacter via LinkedIn ou par email.";
 
