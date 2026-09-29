@@ -20,20 +20,10 @@ export interface Education {
   description?: string;
 }
 
-export interface Skill {
-  id: string;
-  name: string;
-}
-
-export interface Project {
+export interface SkillGroup {
   id: string;
   title: string;
-  period: string;
-  description: string;
-  richDescription?: React.ReactNode;
-  technologies: string[];
-  websiteUrl?: string;
-  sourceUrl?: string;
+  items: string[];
 }
 
 export interface Realisation {
@@ -49,4 +39,4 @@ export interface Realisation {
 export interface ThemeContextType {
   darkMode: boolean;
   toggleTheme: () => void;
-} 
+}

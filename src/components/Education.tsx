@@ -36,7 +36,7 @@ const Education: React.FC<EducationProps> = ({ educationList }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <h2>Éducation</h2>
+      <h2>Formation & certifications</h2>
       <motion.div 
         className="timeline"
         variants={staggerContainer}
@@ -52,4 +52,4 @@ const Education: React.FC<EducationProps> = ({ educationList }) => {
   );
 };
 
-export default Education; 
+export default Education;

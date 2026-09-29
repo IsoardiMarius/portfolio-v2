@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Skill } from '../types/types';
+import { SkillGroup } from '../types/types';
 import { fadeInUp, staggerContainer, skillVariant, skillHover } from '../animations/variants';
 
 interface SkillsProps {
-  skills: Skill[];
+  skills: SkillGroup[];
 }
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
@@ -18,21 +18,31 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <h2>Compétences</h2>
-      <motion.div 
-        className="skills-container"
+      <motion.p
+        className="section-intro"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        Compétences ciblées pour la conception, l'automatisation et l'exploitation de plateformes cloud.
+      </motion.p>
+      <motion.div
+        className="skill-groups"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {skills.map(skill => (
-          <motion.div 
-            key={skill.id}
-            className="skill" 
-            variants={skillVariant}
-            whileHover={skillHover}
-          >
-            {skill.name}
+        {skills.map(group => (
+          <motion.div key={group.id} className="skill-group" variants={skillVariant}>
+            <h3>{group.title}</h3>
+            <div className="skills-container">
+              {group.items.map(item => (
+                <motion.span key={item} className="skill" whileHover={skillHover}>
+                  {item}
+                </motion.span>
+              ))}
+            </div>
           </motion.div>
         ))}
       </motion.div>
@@ -40,4 +50,4 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
   );
 };
 
-export default Skills; 
+export default Skills;

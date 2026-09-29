@@ -92,15 +92,10 @@ export const skillHover = {
   color: "white"
 };
 
-export const projectCardHover = {
-  y: -10, 
-  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)"
-};
-
 export const buttonHover = {
   scale: 1.05
 };
 
 export const buttonTap = {
   scale: 0.95
-}; 
+};

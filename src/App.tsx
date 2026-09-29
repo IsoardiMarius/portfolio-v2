@@ -11,7 +11,6 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
 import Realisations from './components/Realisations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -22,7 +21,6 @@ import TopNavbar from './components/TopNavbar';
 import { experiences } from './data/experiences';
 import { education } from './data/education';
 import { skills } from './data/skills';
-import { projects } from './data/projects';
 import { realisations } from './data/realisations';
 import { contactMessage } from './data/socialLinks';
 
@@ -52,69 +50,29 @@ const App: React.FC = () => {
       >
         <Header 
           name="Marius Isoardi"
-          subtitle="Développeur Fullstack avec une forte sensibilité DevOps / Cloud."
+          subtitle="Cloud & DevOps Engineer — Infrastructure as Code, Kubernetes, CI/CD et observabilité."
           initials="MI"
         />
 
         <main className="main">
           <About>
-            <p>Actuellement en poste chez <strong>Hexacoffre</strong> en tant que développeur fullstack.</p>
+            <p>Ingénieur Cloud & DevOps basé à <strong>Paris</strong>, avec une expérience de développeur backend et fullstack acquise chez <strong>HexaCoffre</strong> et sur plusieurs architectures distribuées.</p>
 
-            <p>Je travaille sur des projets techniques mêlant backend, frontend et infrastructure. Certifié <strong>AWS
-              Cloud Practitioner</strong>, je m'oriente activement vers les métiers du Cloud, avec l'objectif de monter
-              en expertise.</p>
+            <p>Diplômé d'un <strong>Master Pro Cloud</strong>, je suis certifié <strong>Google Professional Cloud Developer</strong> et <strong>AWS Cloud Practitioner</strong>. Je conçois, automatise et exploite des plateformes conteneurisées en m'appuyant sur Kubernetes, Terraform, Ansible et des pipelines CI/CD.</p>
 
             <div className="stack-container">
-              <p className="stack-title">Stack Dev :</p>
+              <p className="stack-title">Objectif professionnel :</p>
               <div className="stack-items">
-                <span className="stack-item">Spring Boot</span>
-                <span className="stack-item">Express</span>
-                <span className="stack-item">Flask</span>
-                <span className="stack-item">React</span>
-                <span className="stack-item">Java</span>
-                <span className="stack-item">JS</span>
-                <span className="stack-item">TS</span>
-                <span className="stack-item">Go</span>
-                <span className="stack-item">gRPC</span>
-                <span className="stack-item">Redis</span>
-                <span className="stack-item">MySQL</span>
+                <span className="stack-item">Cloud Engineer</span>
+                <span className="stack-item">DevOps Engineer</span>
+                <span className="stack-item">Platform Engineer</span>
               </div>
             </div>
-
-            <div className="stack-container">
-              <p className="stack-title">Stack Ops :</p>
-              <div className="stack-items">
-                <span className="stack-item">Terraform</span>
-                <span className="stack-item">Kubernetes</span>
-                <span className="stack-item">Ansible</span>
-                <span className="stack-item">Docker</span>
-                <span className="stack-item">GitLab CI/CD</span>
-                <span className="stack-item">GitHub Actions</span>
-                <span className="stack-item">AWS</span>
-                <span className="stack-item">Azure</span>
-              </div>
-            </div>
-
-            <div className="stack-container">
-              <p className="stack-title">Compétences transverses :</p>
-              <div className="stack-items">
-                <span className="stack-item">Gestion des priorités</span>
-                <span className="stack-item">Gestion et coordination d'équipe</span>
-                <span className="stack-item">Conception</span>
-                <span className="stack-item">Prise d'initiative</span>
-                <span className="stack-item">Adaptabilité</span>
-              </div>
-            </div>
-
-
-            <p>Je privilégie un poste de <strong>Cloud Engineer</strong> tout en restant ouvert aux missions fullstack.
-            </p>
           </About>
 
           <Experience experiences={experiences}/>
           <Education educationList={education}/>
           <Skills skills={skills}/>
-          <Projects projects={projects}/>
           <Realisations realisations={realisations}/>
           <Contact message={contactMessage}/>
         </main>

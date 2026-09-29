@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+const sections = [
+  { id: 'about', label: 'À propos' },
+  { id: 'experience', label: 'Expérience' },
+  { id: 'education', label: 'Formation' },
+  { id: 'skills', label: 'Compétences' },
+  { id: 'realisations', label: 'Réalisations' },
+  { id: 'contact', label: 'Contact' },
+];
+
 const TopNavbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('accueil');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 768);
-
-  // Liste des sections du portfolio
-  const sections = [
-    { id: 'about', label: 'À propos' },
-    { id: 'experience', label: 'Expérience' },
-    { id: 'education', label: 'Formation' },
-    { id: 'skills', label: 'Compétences' },
-    { id: 'projects', label: 'Projets' },
-    { id: 'realisations', label: 'Réalisations' },
-    { id: 'contact', label: 'Contact' },
-  ];
 
   useEffect(() => {
     // Fonction pour détecter la section active lors du défilement
@@ -33,7 +31,6 @@ const TopNavbar: React.FC = () => {
           // Si une partie de la section contact est visible, on l'active
           if (contactRect.top < windowHeight && contactRect.bottom > 0) {
             if (activeSection !== 'contact') {
-              console.log('Section contact activée (visible en bas de page)');
               setActiveSection('contact');
             }
             return;
@@ -48,7 +45,6 @@ const TopNavbar: React.FC = () => {
         if (section && scrollPosition >= section.offsetTop) {
           const id = section.getAttribute('id') ?? '';
           if (id && id !== activeSection) {
-            console.log(`Section active détectée: ${id}`);
             setActiveSection(id);
           }
           break;
@@ -74,7 +70,6 @@ const TopNavbar: React.FC = () => {
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1); // Enlever le # du début
       if (hash) {
-        console.log(`Hash URL détecté: ${hash}`);
         // Si le hash correspond à une section, l'activer
         const sectionIds = sections.map(section => section.id);
         if (sectionIds.includes(hash)) {
@@ -100,7 +95,7 @@ const TopNavbar: React.FC = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('hashchange', handleHashChange);
     };
-  }, [activeSection, menuOpen, sections]);
+  }, [activeSection, menuOpen]);
 
   // Fonction pour naviguer vers une section
   const scrollToSection = (id: string) => {
@@ -191,4 +186,4 @@ const TopNavbar: React.FC = () => {
   );
 };
 
-export default TopNavbar; 
+export default TopNavbar;

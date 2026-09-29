@@ -37,7 +37,7 @@ const Realisations: React.FC<RealisationsProps> = ({ realisations }) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
     >
-      <h2>Réalisations</h2>
+      <h2>Réalisations Cloud & DevOps</h2>
       <motion.p 
         className="section-intro"
         initial={{ opacity: 0 }}
@@ -45,7 +45,7 @@ const Realisations: React.FC<RealisationsProps> = ({ realisations }) => {
         transition={{ delay: 0.2 }}
         viewport={{ once: true }}
       >
-        J'aime construire des choses
+        Projets techniques représentatifs de mon positionnement Cloud, DevOps et Platform Engineering.
       </motion.p>
       <motion.p
         initial={{ opacity: 0 }}
@@ -53,7 +53,7 @@ const Realisations: React.FC<RealisationsProps> = ({ realisations }) => {
         transition={{ delay: 0.3 }}
         viewport={{ once: true }}
       >
-        Pendant mon parcours académique et professionnel, j'ai eu l'opportunité de développer des projets concrets : prototypes, collaborations ponctuelles, ou encore expérimentations personnelles autour d'outils, frameworks et architectures qui m'intéresse.
+        Ces réalisations couvrent le provisionnement d'infrastructures, l'orchestration Kubernetes, le GitOps, l'observabilité, la sécurité et l'optimisation des coûts cloud.
       </motion.p>
       
       <motion.div 
