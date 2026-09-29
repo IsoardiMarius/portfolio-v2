@@ -11,7 +11,6 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
-import Realisations from './components/Realisations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -21,7 +20,6 @@ import TopNavbar from './components/TopNavbar';
 import { experiences } from './data/experiences';
 import { education } from './data/education';
 import { skills } from './data/skills';
-import { realisations } from './data/realisations';
 import { contactMessage } from './data/socialLinks';
 
 // Animations
@@ -50,30 +48,24 @@ const App: React.FC = () => {
       >
         <Header 
           name="Marius Isoardi"
-          subtitle="Cloud & DevOps Engineer — Infrastructure as Code, Kubernetes, CI/CD et observabilité."
+          subtitle="Ingénieur Infrastructure | Cloud & DevOps"
           initials="MI"
         />
 
         <main className="main">
           <About>
-            <p>Ingénieur Cloud & DevOps basé à <strong>Paris</strong>, avec une expérience de développeur backend et fullstack acquise chez <strong>HexaCoffre</strong> et sur plusieurs architectures distribuées.</p>
+            <p>J'ai débuté côté développement avant de me tourner progressivement vers les systèmes, l'infrastructure, le cloud et le DevOps.</p>
 
-            <p>Diplômé d'un <strong>Master Pro Cloud</strong>, je suis certifié <strong>Google Professional Cloud Developer</strong> et <strong>AWS Cloud Practitioner</strong>. Je conçois, automatise et exploite des plateformes conteneurisées en m'appuyant sur Kubernetes, Terraform, Ansible et des pipelines CI/CD.</p>
+            <p>Un fil conducteur relie ces étapes : <strong>l'automatisation</strong>. Ce qui me plaît, c'est de rendre les déploiements reproductibles, réduire les manipulations manuelles et fiabiliser l'exploitation au quotidien.</p>
 
-            <div className="stack-container">
-              <p className="stack-title">Objectif professionnel :</p>
-              <div className="stack-items">
-                <span className="stack-item">Cloud Engineer</span>
-                <span className="stack-item">DevOps Engineer</span>
-                <span className="stack-item">Platform Engineer</span>
-              </div>
-            </div>
+            <p>À l'<strong>ESSEC</strong>, je conçois et fais évoluer des infrastructures on-premise et GCP dans cette même logique. J'aime porter un sujet de bout en bout, des choix d'architecture jusqu'au code, puis à l'exploitation.</p>
+
+            <p>J'accorde aussi une vraie importance à la documentation et à la passation. Pour moi, un travail n'est terminé que lorsque l'équipe peut le comprendre, le reprendre et le faire évoluer en autonomie.</p>
           </About>
 
           <Experience experiences={experiences}/>
           <Education educationList={education}/>
           <Skills skills={skills}/>
-          <Realisations realisations={realisations}/>
           <Contact message={contactMessage}/>
         </main>
 

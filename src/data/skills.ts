@@ -2,28 +2,28 @@ import { SkillGroup } from '../types/types';
 
 export const skills: SkillGroup[] = [
   {
-    id: 'cloud',
-    title: 'Cloud & Infrastructure as Code',
-    items: ['Google Cloud', 'AWS', 'Azure', 'Oracle Cloud', 'Terraform', 'Terragrunt', 'Ansible']
+    id: 'infrastructure',
+    title: 'Infrastructure & Cloud',
+    items: ['GCP', 'VMware vSphere', 'Terraform', 'Ansible', 'Packer', 'Veeam']
   },
   {
-    id: 'containers',
-    title: 'Conteneurs & orchestration',
-    items: ['Kubernetes', 'Docker', 'Helm', 'Kustomize', 'NGINX Ingress', 'GitOps']
+    id: 'systems',
+    title: 'Systèmes & automatisation',
+    items: ['Linux', 'Bash', 'Python', 'PowerShell', 'Vault', 'GitLab']
   },
   {
-    id: 'delivery',
-    title: 'CI/CD & exploitation',
-    items: ['GitLab CI/CD', 'GitHub Actions', 'Linux', 'Prometheus', 'Grafana', 'Loki']
+    id: 'data',
+    title: 'Données & services cloud',
+    items: ['PostgreSQL', 'Redis', 'Cloud SQL', 'Filestore', 'AWS SQS', 'AWS SNS', 'AWS SES']
   },
   {
-    id: 'security',
-    title: 'Sécurité des plateformes',
-    items: ['OPA Gatekeeper', 'Kubernetes Secrets', 'OAuth2', 'Dex']
+    id: 'development',
+    title: 'Développement',
+    items: ['Java', 'Spring Boot', 'React', 'Go', 'Flask', 'Ruby on Rails', 'REST', 'gRPC', 'WebSockets']
   },
   {
-    id: 'backend',
-    title: 'Backend & systèmes distribués',
-    items: ['Java', 'Spring Boot', 'Go', 'Python', 'REST', 'gRPC', 'PostgreSQL', 'Redis']
+    id: 'practices',
+    title: 'Architecture & exploitation',
+    items: ['IAM', 'Backup & Disaster Recovery', 'Haute disponibilité', 'DevOps', 'SOLID', 'Clean Architecture', 'Agile Scrum']
   }
 ];

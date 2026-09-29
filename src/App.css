@@ -194,13 +194,13 @@ body {
   gap: 1.5rem;
 }
 
-.experience-item, .education-item, .realisation-item {
+.experience-item, .education-item {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
 
-.company-logo, .education-logo, .realisation-logo {
+.company-logo, .education-logo {
   width: 36px;
   height: 36px;
   background-color: var(--border-light);
@@ -214,7 +214,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.company-logo:hover, .education-logo:hover, .realisation-logo:hover {
+.company-logo:hover, .education-logo:hover {
   background-image: var(--gradient-primary);
   color: white;
   transform: translateY(-2px) scale(1.05);
@@ -222,34 +222,25 @@ body {
 }
 
 .App.dark .company-logo,
-.App.dark .education-logo,
-.App.dark .realisation-logo {
+.App.dark .education-logo {
   background-color: var(--border-dark);
   color: var(--text-secondary-dark);
 }
 
 .App.dark .company-logo:hover,
-.App.dark .education-logo:hover,
-.App.dark .realisation-logo:hover {
+.App.dark .education-logo:hover {
   background-image: var(--gradient-primary);
   color: white;
 }
 
-.experience-content, .education-content, .realisation-content {
+.experience-content, .education-content {
   flex: 1;
 }
 
-.experience-content h3, .education-content h3, .realisation-content h3 {
+.experience-content h3, .education-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-}
-
-.realisation-content h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-  margin-top: 0.5rem;
 }
 
 .date, .location {
@@ -321,23 +312,6 @@ body {
 .App.dark .skill:hover {
   background-image: var(--gradient-primary);
   color: white;
-}
-
-/* Realisations */
-.realisations-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.realisation-item {
-  margin-bottom: 0.5rem;
-}
-
-.realisation-content .description {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
 }
 
 /* Contact */
@@ -486,35 +460,6 @@ body {
 .about-content strong {
   color: var(--primary);
   font-weight: 600;
-}
-
-.about-content .stack-container {
-  margin-top: 0.5rem;
-}
-
-.about-content .stack-title {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-
-.about-content .stack-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-content .stack-item {
-  padding: 0.2rem 0.5rem;
-  background-color: var(--border-light);
-  color: var(--text-light);
-  border-radius: 4px;
-  font-size: 0.85rem;
-}
-
-.App.dark .about-content .stack-item {
-  background-color: var(--border-dark);
-  color: var(--text-dark);
 }
 
 /* Experience Rich Description */

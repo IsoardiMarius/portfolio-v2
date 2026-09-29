@@ -26,16 +26,6 @@ export interface SkillGroup {
   items: string[];
 }
 
-export interface Realisation {
-  id: string;
-  name: string;
-  logo: string;
-  displayName: string;
-  period: string;
-  location: string;
-  description: React.ReactNode;
-}
-
 export interface ThemeContextType {
   darkMode: boolean;
   toggleTheme: () => void;

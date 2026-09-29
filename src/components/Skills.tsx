@@ -24,7 +24,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        Compétences ciblées pour la conception, l'automatisation et l'exploitation de plateformes cloud.
+        Technologies et pratiques mobilisées dans mes expériences professionnelles.
       </motion.p>
       <motion.div
         className="skill-groups"

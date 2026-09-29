@@ -81,11 +81,6 @@ export const educationLogoHover = {
   backgroundColor: "#1e40af"
 };
 
-export const realisationLogoHover = {
-  scale: 1.1, 
-  backgroundColor: "#6d28d9"
-};
-
 export const skillHover = {
   scale: 1.1, 
   backgroundColor: "#3b82f6", 
