@@ -67,14 +67,6 @@ export const socialLinks: SocialLink[] = [
     showInNavbar: true,
     showInContact: true
   },
-  {
-    name: "06 12 02 84 85",
-    url: "tel:+33612028485",
-    ariaLabel: `Téléphoner au ${contactPhone}`,
-    icon: icons.phone,
-    showInNavbar: false,
-    showInContact: true
-  },
 ];
 
 // Filtres pour obtenir des sous-ensembles des liens
