@@ -10,7 +10,7 @@ export const education: Education[] = [
   },
   {
     id: 'edu2',
-    institution: 'Google',
+    institution: 'GCP',
     logo: 'G',
     degree: 'Professional Cloud Developer Certification',
     period: 'Émise en février 2026 - Expire en février 2028'

@@ -2,28 +2,23 @@ import { SkillGroup } from '../types/types';
 
 export const skills: SkillGroup[] = [
   {
-    id: 'infrastructure',
-    title: 'Infrastructure & Cloud',
-    items: ['GCP', 'VMware vSphere', 'Terraform', 'Ansible', 'Packer', 'Veeam']
+    id: 'cloud',
+    title: 'Cloud & virtualisation',
+    items: ['GCP', 'AWS', 'VMware vSphere']
   },
   {
-    id: 'systems',
-    title: 'Systèmes & automatisation',
-    items: ['Linux', 'Bash', 'Python', 'PowerShell', 'Vault', 'GitLab']
+    id: 'automation',
+    title: 'Infrastructure as Code & automatisation',
+    items: ['Terraform', 'Ansible', 'Packer', 'Bash', 'Python', 'PowerShell']
   },
   {
-    id: 'data',
-    title: 'Données & services cloud',
-    items: ['PostgreSQL', 'Redis', 'Cloud SQL', 'Filestore', 'AWS SQS', 'AWS SNS', 'AWS SES']
+    id: 'platforms',
+    title: 'Systèmes & plateformes',
+    items: ['Linux', 'HashiCorp Vault', 'GitLab', 'Veeam', 'IPAM / DNS', 'LVM']
   },
   {
-    id: 'development',
-    title: 'Développement',
-    items: ['Java', 'Spring Boot', 'React', 'Go', 'Flask', 'Ruby on Rails', 'REST', 'gRPC', 'WebSockets']
-  },
-  {
-    id: 'practices',
-    title: 'Architecture & exploitation',
-    items: ['IAM', 'Backup & Disaster Recovery', 'Haute disponibilité', 'DevOps', 'SOLID', 'Clean Architecture', 'Agile Scrum']
+    id: 'resilience',
+    title: 'Données, sécurité & résilience',
+    items: ['PostgreSQL', 'Redis', 'Cloud SQL', 'IAM', 'Backup & Disaster Recovery', 'PITR']
   }
 ];

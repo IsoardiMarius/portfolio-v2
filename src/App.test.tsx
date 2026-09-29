@@ -6,7 +6,7 @@ import { socialLinks } from './data/socialLinks';
 test('contient uniquement les informations du CV', () => {
   expect(education).toEqual(expect.arrayContaining([
     expect.objectContaining({
-      institution: 'Google',
+      institution: 'GCP',
       degree: 'Professional Cloud Developer Certification',
       period: 'Émise en février 2026 - Expire en février 2028'
     }),
@@ -21,9 +21,10 @@ test('contient uniquement les informations du CV', () => {
     .toBe('https://www.linkedin.com/in/marius-isoardi/');
 
   expect(skills).toEqual(expect.arrayContaining([
-    expect.objectContaining({ title: 'Infrastructure & Cloud' }),
-    expect.objectContaining({ title: 'Systèmes & automatisation' }),
-    expect.objectContaining({ title: 'Données & services cloud' })
+    expect.objectContaining({ title: 'Cloud & virtualisation' }),
+    expect.objectContaining({ title: 'Infrastructure as Code & automatisation' }),
+    expect.objectContaining({ title: 'Systèmes & plateformes' }),
+    expect.objectContaining({ title: 'Données, sécurité & résilience' })
   ]));
 
   expect(experiences[0]).toEqual(expect.objectContaining({

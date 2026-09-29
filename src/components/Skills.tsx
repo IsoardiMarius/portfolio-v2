@@ -24,7 +24,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        Technologies et pratiques mobilisées dans mes expériences professionnelles.
+        Les compétences essentielles de mon activité Infrastructure, Cloud et DevOps.
       </motion.p>
       <motion.div
         className="skill-groups"
